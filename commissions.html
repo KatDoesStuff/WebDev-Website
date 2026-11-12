@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions</title>
+    <!--Link the external CSS file to this html file-->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+
+<!-- ///////////////////////////////////////////////////// -->
+<!-- ----------------- HEADER & NAV BAR ------------------ -->
+<!-- (For Small devices) -->
+<body>
+
+    <!-- -------------------- Curtain Menu ------------------- -->
+    <nav class="small-nav">
+        <label for="cm-toggle" class="menu-button">☰ Menu</label>          
+        <!-- Hidden Checkbox (controls menu) --> 
+        <input type="checkbox" id="cm-toggle"> 
+        <div class="cm"> <!-- Curtain Menu --> 
+            <label for="cm-toggle" class="go-back-button">&#8617; Go Back</label> 
+            <!-- Curtain menu nav options --> 
+            <div class="cm-options"> 
+                <a href="index.html">Home</a> 
+                <a href="portfolio.html">Portfolio</a> 
+                <a href="premadeStore.html">Store</a> 
+                <a href="commissions.html">Commissions & Pricing</a> 
+                <a href="tos.html">Terms of Service</a> 
+            </div> 
+        </div> 
+        <img class="small-head-img" src="images/mainLogo.png" alt="nav-logo">
+    </nav>
+
+    <!-- ///////////////////////////////////////////////////// -->
+
+
+    <!-- ///////////////////////////////////////////////////// -->
+    <!-- ----------------- HEADER & NAV BAR ------------------ -->
+    <!-- (For Large devices) -->
+
+    <nav class="med-large-nav">
+        <!-- Menu Items --> 
+        <div class="nav-options"> 
+            <a class="nav-text" href="index.html">
+                <img class="nav-img" src="images/miniLogo.png" alt="nav-logo" href="index.html">
+            </a> 
+            <a class="nav-text" href="portfolio.html">Portfolio</a> 
+            <a class="nav-text" href="premadeStore.html">Store</a> 
+            <a class="nav-text" href="commissions.html">Comms & Pricing</a> 
+            <a class="nav-text" href="tos.html">Terms of Service</a> 
+        </div>   
+    </nav>
+    <!-- ///////////////////////////////////////////////////// -->
+
+
+        <!-- ///////////////////////////////////////////////////// -->
+        <!-- ----------------------- TOS Box --------------------- -->
+  <div class="content" id="tos">
+        <!-- ///////////////////////////////////////////////////// -->
+        <!-- ----------------------- TOS Box --------------------- -->
+        <div class="comms-box">
+            <div class="comms-title">
+                <h2>Commission info, and Pricing</h2>
+                <br>
+                <hr>
+            </div>
+            <div class="comms-content">
+                <img class="img" src="images/storeArt1.png" alt="A green creature with red fuzzy antenna, claws, and two sets of wings.">
+                <h3>
+                My commissions are currently: Open<br>
+                My art trades are currently: Open<br>
+                My character trades are currently: Closed<br>
+                <br>Here are my current price listings:
+                <br>- Doodle: $3 NZD
+                <br>- Simple shaped/chibi: $8 NZD
+                <br>- Pfp/Headshot/Bust: $15 NZD
+                <br>- Halfbody: $20 NZD
+                <br>- Fullbody: $25 NZD
+                <br>- Ref sheet: $45 USD
+                <br>- Ref with character interaction: $50 - 55
+                <br>
+            </h3></div>
+        </div>
+
+            <!-- ///////////////////////////////////////////////////// -->
+
+    ≈
+            <footer>
+            <div class="footer-nav-options">
+                <a href="commissions.html">Back to top!</a> 
+                <a href="index.html">Home</a> 
+                <a href="portfolio.html">Portfolio</a> 
+                <a href="premadeStore.html">Store</a> 
+                <a href="tos.html">TOS</a> 
+            </div>
+            <div class="footer-other-options">
+                <p class="email">
+                    Looking to contact me?: InsertBuisnessEmail@gmail.com
+                </p>
+                <p class="copy-priv">
+                    <span>
+                        <button onclick="document.getElementById('dialogContainer').showModal()" class="pref-button">Settings & Privacy Policy</button>
+                    <dialog id="dialogContainer" class="preferences-panel"></dialog></span> </p> </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>

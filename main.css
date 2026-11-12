@@ -1,0 +1,660 @@
+/* ------------------------------------------------------------------------ */
+/* ----------------------------- SMALL DEVICES ---------------------------- */
+/* ------------------------------------------------------------------------ */
+
+header {display: none}
+
+.med-large-nav {
+    display: none;
+    z-index: 100;
+}
+
+.nav-options {display: none}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-col: rgb(255, 255, 255);
+    --prefbox-bg-col: rgb(255, 255, 255);
+
+    --text-col: rgb(70, 35, 103);
+    --prefbox-text-color: rgb(70, 35, 103);
+
+    --outline-color: rgb(255, 255, 255);
+    --prefbox-outline-color: rgb(255, 255, 255);
+}
+
+.darkMode {
+    --bg-col: rgb(16, 12, 32);
+    --prefbox-bg-col: rgb(16, 12, 32);
+    --text-col: white;
+    --prefbox-text-col: white;
+    --outline-col: rgb(255, 255, 255);
+    --prefbox-outline-col: rgb(255, 255, 255);
+}
+
+.preferences-panel {
+    background-color: var(--prefbox-bg-col);
+    outline-color: var(--prefbox-text-color);
+    color: var(--prefbox-outline-color);
+}
+
+h1 {
+    color:white;
+    font-size: clamp(25px, 13.64px + 3.03vw, 50px);
+}
+
+hr {
+    color: var(--text-col);
+}
+
+h2 {
+    text-align: center;
+    margin: 0px; 
+    font-size: clamp(25px, 1.82vw, 38px);
+    color: var(--text-col);
+}
+
+h2#store {
+    font-size: clamp(18px, 1.82vw, 33px);
+    color: white;font-weight: lighter;
+}
+
+h2#store-sub {
+    font-size: clamp(15px, 1.4vw, 26px);
+    color: rgba(255, 255, 255, 0.798);font-weight: lighter;
+}
+
+h3 {
+    margin: 0px; 
+    color: var(--text-col);
+    font-weight: lighter;
+}
+ 
+p {
+    margin: 0px;
+    font-size: clamp(14px, 0.45vw, 20px); 
+        color: var(--text-col);
+}
+
+p#ml {
+    font-size: clamp(18px, 0.8vw, 25px); 
+        color: var(--text-col);
+}
+
+ul {
+    margin: 0px;
+    padding: 10px;
+    font-size: clamp(14px, 0.45vw + 12.5px, 20px); 
+    color: var(--text-col);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    font-family: Verdana, sans-serif
+}
+
+body, nav {
+    background-image: url(images/smallBckgrnd.png); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center top;  
+    background-attachment: fixed; 
+}
+
+/* ----------------------------- HEADER/NAV/MENU -------------------------- */
+
+.small-head-img {
+    width: 60vw;
+}
+
+.small-nav {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    height: 12vh;
+    width: 100%;
+    gap: 5vw;
+    z-index: 100;
+}
+
+.menu-button {/* Hamburger button */ 
+    color: white;
+    font-size: clamp(6px, 1vw + 1.2rem, 26px);  
+    cursor: pointer;
+    padding: 15px;
+    left: 15px;
+}  
+   
+.cm {   
+    position: fixed;
+    top: 0; left: 0;    
+    width: 100%; 
+    height: 0; /* 0 height until the menu button is clicked */   
+    background-image: url(images/cmCurtain.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    transition: 2s;
+    text-align: center;   
+    z-index: 200;  
+}     
+  
+
+
+#cm-toggle { /* Checkbox */ 
+    display: none; /* Hides the checkbox*/ 
+}  
+
+/* Shows the menu when checked */ 
+#cm-toggle:checked ~ .cm {   
+    height: 100%; /* Height goes from 0% to 100% */  
+}  
+
+.go-back-button {   
+    font-size: 30px; 
+    color: white;   
+    position: absolute;
+    top: 20px; left: 20px;
+    cursor: pointer;
+}  
+
+.cm-options {   
+    margin-top: 100px;
+    margin-bottom: 0px;  
+}  
+
+.cm-options a {   
+    display: block;
+    font-size: 30px; padding: 25px;
+    color: white;   
+    text-decoration: none;
+}  
+
+/* Hover effect */ 
+.cm-options a:hover {color: #3498db;} 
+
+/* --------------------------------- CONTENT ------------------------------ */
+
+.content { 
+    display: flex;
+    flex-direction: column;  
+    width: 100%;
+    margin: 0 auto; 
+    height: 88%;
+}
+
+.content#tos {
+    align-items: center;
+    height: 88%
+}
+
+.content#index {
+    margin-top: 0
+}
+
+.content#store {
+    display: block;
+    padding: 30px;
+    width: 100%;
+}
+
+
+/* ------------------------------ FOOTER BOX ------------------------------ */
+
+footer {
+    position: relative;     
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 20px;
+    width: 100vw;
+    height: max-content;
+    padding: 30px;
+}
+
+.footer-nav-options {
+    gap: 4vw;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center; 
+    justify-content: center;
+    font-size: clamp(5px, 1vw + 0.8rem, 20px);
+    cursor: pointer;
+}
+.footer-nav-options a {
+    color: white;
+    text-decoration: none;
+}
+.footer-nav-options a:hover {
+    color: rgb(36, 168, 188);
+    text-decoration: underline;
+}
+.email {
+    color: rgb(206, 206, 206);
+    font-size: 15px;
+}
+.footer-other-options {
+    gap: 4vw;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center; 
+    justify-content: center;
+    font-size: clamp(5px, 1vw + 0.8rem, 20px);
+    cursor: pointer;
+}
+
+/* ------------------------------ POP-UPS --------------------------- */
+
+
+/* --------------------------- Main Boxes --------------------------- */
+
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 40px;
+    width: 100vw;
+    gap: 40px;
+    padding: 30px;
+    background-color: var(--bg-col);
+    outline-color: var(--text-col);
+}
+
+
+
+/* --------------------------- INDEX PAGE --------------------------- */
+
+/* ---- Main Box 1 ---- */
+
+.img {
+    flex: 1 1 350px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    outline-width: 4px;
+    outline-style: solid;
+    outline-color: white;
+    outline-offset: 4px;
+}
+
+.text-box {
+    flex: 1 1 300px;
+}
+
+.text-box#center {
+    text-align: center;
+    align-items:center;
+}
+
+.ml-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0; 
+  font-size: clamp(1.25rem, 1rem + 2.5vw, 1.56rem);
+  color: rgb(35, 35, 103);}
+.ml-link {color: rgb(36, 168, 188);}
+
+
+/* -------------------------- PORTFOLIO PAGE ------------------------- */
+
+.portfolio-bttn-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center; 
+    width: 100%;
+    height:max-content;
+    gap: 5vw;
+    margin-bottom: 40px;
+}
+
+.portfolio-bttn {
+    display:flex;
+    width: 80vw;
+    min-width: 150px;
+    max-width: 400px;
+    height: 90px;
+    background-color: rgb(237, 227, 241);
+    border-radius: 20px;
+    border: 5px solid rgb(84, 65, 119);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.p-bttn-text {
+    font-weight: bold;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);  
+    color: rgb(102, 83, 136);
+    text-decoration: none;
+}
+
+.portfolio-bttn a:hover {
+  color: rgb(36, 168, 188);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---- Main Box 1 ---- */
+
+.title-box {
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+    width: 100%;
+    height:max-content;
+    gap: 5vw;
+    margin-bottom: 40px;
+}
+
+.cos-img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: center;
+    justify-content: center; 
+}
+
+/* -------------------------- COMMISSIONS PAGE ------------------------- */
+
+.comms-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    width: 90vw;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    background-color: var(--bg-col);
+    outline-color: var(--text-col);
+}
+
+.comms-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+    background-color: var(--bg-col);
+    outline-color: var(--text-col);
+}
+
+/* ------------------------------- TOS PAGE -------------------------- */
+
+/* ---- Terms of Service box ---- */
+.tos-box { 
+    background-color: var(--bg-col);
+    outline-color: var(--text-col);
+    width: 100vw;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.tos-box p {
+    margin-bottom: 20px;
+}
+
+/* -------------------------- STORE PAGE ------------------------- */
+.filters {
+    align-content: center;
+    margin-bottom: 20px;
+    display:flex;
+    flex-direction: row;
+    gap:25px;
+}
+
+#storeItems {     
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;      
+    margin: 0;
+    width:100%;
+    max-width: 1200px;
+    gap:20px;          
+}
+
+.item-card {       
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+    margin-bottom: 20px;
+    width: clamp(250px, 4.5px + 38.8vw, 470px);
+    padding-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    outline-color: var(--text-col);
+}
+
+.item-card img {
+    width: 100%;
+    max-width: 450px;       
+    height: auto;      
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* ----------------------------- MEDIUM DEVICES --------------------------- */
+/* ------------------------------------------------------------------------ */
+@media screen and (min-width: 550px) {
+.portfolio-bttn-box {
+    flex-direction: row;
+    gap: 4vw
+}
+.portfolio-bttn {
+    width: 42vw;
+}
+.main-box {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tos-box p {
+    margin-left: 10px;
+}
+
+.tos-box { 
+  width: 90vw;
+  padding: 30px;
+}
+
+
+}@media screen and (min-width: 750px) {
+
+body { 
+    height: 100%;
+    margin: 0; padding: 0; 
+    justify-items: center;
+}
+
+body, nav {
+    background-image: url(images/largeMedBckgrnd.png); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center top;  
+    background-attachment: fixed; 
+}
+
+
+.content { 
+    justify-items: center;
+    margin-top: 80px;
+}
+
+.content#index .main-box:first-of-type {
+    margin-bottom: 70px;
+    padding: 20px;
+    padding-bottom: 35px;
+
+}
+
+.main-box {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 60px;
+}
+
+/* ----------------------------- HEADER/NAV/MENU -------------------------- */
+.small-nav{display: none} 
+.menu-button {display: none}
+.cm{display: none} 
+.cm-options {display: none}
+
+header {display: unset} 
+.med-large-nav {display: unset} 
+.nav-options {display: unset}
+
+.nav-options a:hover {text-decoration: underline;}
+.nav-text {cursor: pointer; font-size: 1em}
+.nav-img {width: auto; height: 60px; height:2em}
+
+.nav-options {
+  width: 100%; 
+  font-size: clamp(1rem, 1vw + 1rem, 30px);
+  gap: 4vw;
+  display: flex; 
+  align-items: center; 
+  text-align: center; 
+  justify-content: center;
+}
+
+.nav-options a { 
+  color: white; 
+  text-decoration: none; 
+  display: inline-block;
+}
+
+.med-large-nav {
+  height: 80px; width: 100%;
+  position: fixed; display: flex; align-items: center;
+  top: 0; left: 0;
+}
+
+/* DO NOT REMOVE THIS!! THIS IS IMPORTANT!!! (You can only see it on large devices)*/
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: white;
+  align-items: center;
+  padding-top: 35px;
+  margin: 0px;
+}
+
+.head-img {
+  width: 60vw;
+  height: auto;
+}
+/* DO NOT REMOVE THIS!! THIS IS IMPORTANT!!! (You can only see it on large devices)*/
+
+/* ------------------------------- INDEX PAGE ------------------------------- */
+
+.index-med-large-nav {
+  height:14vh; width: 100%;
+  position:static; display: flex; align-items: center;
+  top:0; left: 0;
+}
+
+.img {
+    padding-top: 30px;
+    align-self: center;
+    max-width: 450px;
+    min-width: 0;  
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+
+.img#ml {
+    max-width: 400px;
+}
+
+/* -------------------------- PORTFOLIO PAGE ------------------------- */
+
+
+.portfolio-bttn-box {
+    gap: 8vw
+}
+.portfolio-bttn {
+    width: 42vw;
+}
+
+/* ------------------------------- TOS PAGE -------------------------- */
+
+/* ---- Terms of Service box ---- */
+.tos-box { 
+  width: 70vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+}
+
+/* ------------------------------------------------------------------------ */
+/* --------------------------- LARGE DEVICES ------------------------------ */
+/* ------------------------------------------------------------------------ */
+
+@media screen and (min-width: 1109px) {
+
+    
+.main-box {
+    max-width:2000px
+}
+
+.content {
+    align-items: center;
+}
+
+/* ----------------------------- INDEX PAGE ---------------------------- */
+
+.text-box {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    max-width: 800px;
+}
+
+.display-row {
+    display:flex;
+    flex-direction: row;
+}
+
+
+/* --------------------------------------------------------------------- */
+} @media screen and (min-width: 2000px) {
+   
+.main-box {
+    border-radius: 40px; 
+}
+
+}
